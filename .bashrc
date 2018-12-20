@@ -125,3 +125,4 @@ if ! shopt -oq posix; then
   fi
 fi
 alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --worktree=/home/rohit'
+alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --work-tree=/home/rohit'

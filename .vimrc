@@ -1,4 +1,5 @@
 set background=dark
+set nu
 
 set nocompatible
 filetype off
