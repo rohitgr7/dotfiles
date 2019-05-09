@@ -34,6 +34,9 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Konfekt/FastFold'
 
+
+Plugin 'Valloric/YouCompleteMe'
+
 call vundle#end()            " required
 filetype plugin indent on
 
