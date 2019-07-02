@@ -126,3 +126,7 @@ if ! shopt -oq posix; then
 fi
 alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --worktree=/home/rohit'
 alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --work-tree=/home/rohit'
+
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+source /home/rohit/.local/bin/virtualenvwrapper.sh
