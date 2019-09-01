@@ -107,3 +107,12 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 source /home/rohit/.local/bin/virtualenvwrapper.sh
 
 alias tmux='tmux -u'
+
+weather() {
+  if [ -n "$2" ] && [ $2 -eq 0 ]
+  then
+    curl -s "wttr.in/"${1:-"delhi"}""
+  else
+    curl -s "wttr.in/"${1:-"delhi"}"?format=${2:-4}"
+  fi
+}
