@@ -102,17 +102,38 @@ source $ZSH/oh-my-zsh.sh
 alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --worktree=/home/rohit'
 alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --work-tree=/home/rohit'
 
+# Virtualenv
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 source /home/rohit/.local/bin/virtualenvwrapper.sh
 
+# Tmux unicode
 alias tmux='tmux -u'
 
+# Weather
 weather() {
   if [ -n "$2" ] && [ $2 -eq 0 ]
   then
-    curl -s "wttr.in/"${1:-"delhi"}""
+    curl -s "wttr.in/"${1:-"New Delhi"}""
   else
-    curl -s "wttr.in/"${1:-"delhi"}"?format=${2:-4}"
+    curl -s "wttr.in/"${1:-"New Delhi"}"?format=${2:-4}"
   fi
+}
+
+# Countdown
+countdown() {
+  date1=$((`date +%s` + $1)); 
+  while [ "$date1" -ge `date +%s` ]; do 
+    echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+    sleep 0.1
+  done
+}
+
+# Stopwatch
+stopwatch() {
+  date1=`date +%s`; 
+  while true; do 
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+    sleep 0.1
+  done
 }

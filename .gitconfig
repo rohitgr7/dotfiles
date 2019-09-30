@@ -3,3 +3,5 @@
 	email = rohitgr1998@gmail.com
 [push]
 	default = simple
+[core]
+	editor = vim
