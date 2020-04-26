@@ -99,12 +99,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Personal settings
-alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --worktree=/home/rohit'
-alias config='/usr/bin/git --git-dir=/home/rohit/.config/ --work-tree=/home/rohit'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# Virtualenv
+# Python and Virtualenv
+alias python=python3.8
+export PATH="$PATH:/home/rohit/.local/bin/"
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
+export VIRTUALENVWRAPPER_VIRTUALENV=/home/rohit/.local/bin/virtualenv
 source /home/rohit/.local/bin/virtualenvwrapper.sh
 
 # Tmux unicode
