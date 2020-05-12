@@ -133,3 +133,6 @@ export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
 export VIRTUALENVWRAPPER_VIRTUALENV=/home/rohit/.local/bin/virtualenv
 source /home/rohit/.local/bin/virtualenvwrapper.sh
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Personal settings
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Python and Virtualenv
 alias python=python3.8
 export PATH="$PATH:/home/rohit/.local/bin/"
