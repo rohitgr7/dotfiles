@@ -305,3 +305,7 @@ set -g @tpm_plugins '              \
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
+
+# 24-bit color
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",*256col*:Tc"

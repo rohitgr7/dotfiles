@@ -1,18 +1,21 @@
 set background=dark
 set nu
+set laststatus=2
 
 set nocompatible
 filetype off
 
-"set ttyfast
 set mouse=a
 set t_Co=256
+
+"powerline_setup
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
    
 set foldcolumn=3
 
+"Vim-Plugin
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -33,8 +36,9 @@ let g:SimpylFold_docstring_preview=1
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Konfekt/FastFold'
-
-
+Plugin 'joshdick/onedark.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'itchyny/vim-gitbranch'
 Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
@@ -42,6 +46,7 @@ filetype plugin indent on
 
 let python_highlight_all=1
 syntax on
+colorscheme onedark
 set encoding=utf-8
 
 set backupdir=~/vimfiles/tmp,.
@@ -87,3 +92,18 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-]> g<C-]>
+
+"24-bit color
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+"lightline configuration
+let g:lightline = {
+\  'colorscheme': 'onedark',
+\  'active': {
+\    'left': [[ 'mode', 'paste' ],
+\             [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
+\   },
+\  'component_function': {'gitbranch': 'gitbranch#name'},
+\  }
