@@ -37,6 +37,7 @@ Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'Konfekt/FastFold'
 Plugin 'joshdick/onedark.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'Valloric/YouCompleteMe'
@@ -46,7 +47,7 @@ filetype plugin indent on
 
 let python_highlight_all=1
 syntax on
-colorscheme onedark
+colorscheme gruvbox
 set encoding=utf-8
 
 set backupdir=~/vimfiles/tmp,.

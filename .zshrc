@@ -105,7 +105,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python and Virtualenv
-alias python=python3.8
+# alias python=python3.8
 export PATH="$PATH:/home/rohit/.local/bin/"
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.8
@@ -142,3 +142,22 @@ stopwatch() {
     sleep 0.1
   done
 }
+
+# The Fuck
+eval $(thefuck --alias)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/rohit/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/rohit/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/rohit/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/rohit/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
